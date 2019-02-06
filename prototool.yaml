@@ -8,7 +8,7 @@ protoc:
   # By default, the directory of the config file is included,
   # or the current directory if there is no config file.
   includes:
-    - plugins
+    - bin
   #includes:
   #  - ../../vendor/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis
 
