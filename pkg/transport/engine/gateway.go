@@ -2,8 +2,8 @@ package engine
 
 import (
 	"context"
-	"github.com/gofunct/pb/pkg/transport//api"
-	"github.com/gofunct/pb/pkg/transport//config"
+	"github.com/gofunct/pb/pkg/transport/api"
+	"github.com/gofunct/pb/pkg/transport/config"
 	"net"
 	"net/http"
 	"time"

@@ -1,9 +1,9 @@
 package engine
 
 import (
-	"github.com/gofunct/pb/pkg/transport//api"
-	"github.com/gofunct/pb/pkg/transport//config"
-	"github.com/gofunct/pb/pkg/transport//middleware"
+	"github.com/gofunct/pb/pkg/transport/api"
+	"github.com/gofunct/pb/pkg/transport/config"
+	"github.com/gofunct/pb/pkg/transport/middleware"
 	"os"
 
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"

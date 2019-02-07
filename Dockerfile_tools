@@ -1,0 +1,28 @@
+FROM golang:1.11
+
+RUN GO111MODULE=off go get -u github.com/myitcv/gobin
+
+RUN gobin github.com/golang/mock/mockgen
+RUN gobin github.com/google/wire/cmd/wire
+RUN gobin github.com/kisielk/errcheck
+RUN gobin github.com/mitchellh/gox
+RUN gobin github.com/srvc/wraperr/cmd/wraperr
+RUN gobin golang.org/x/lint/golint
+RUN gobin honnef.co/go/tools/cmd/megacheck
+RUN gobin github.com/rakyll/statik
+RUN gobin github.com/cweill/gotests/gotests
+RUN gobin github.com/smartystreets/goconvey
+RUN gobin github.com/openfaas/faas/watchdog
+RUN gobin github.com/gopherjs/gopherjs
+RUN gobin github.com/gofunct/pb
+
+RUN wget -q --show-progress --https-only --timestamping \
+      https://pkg.cfssl.org/R1.2/cfssl_linux-amd64 \
+      https://pkg.cfssl.org/R1.2/cfssljson_linux-amd64
+
+RUN chmod +x cfssl_linux-amd64 cfssljson_linux-amd64
+RUN mv cfssl_linux-amd64 /go/bin/cfssl
+RUN mv cfssljson_linux-amd64 /go/bin/cfssljson
+
+RUN gobin github.com/rodrigo-brito/gocity
+RUN gobin github.com/awalterschulze/goderive

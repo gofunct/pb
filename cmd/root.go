@@ -32,13 +32,18 @@ import (
 var (
 
 	// Used for flags.
-	cfgFile, userLicense, in, out, pkg string
+	in, out, pkg string
 	rootCmd                            = &cobra.Command{
 		Use:   "pb",
 		Short: "A generator for protobuf based applications ",
-		Long: `pb is a protocol buffers utility tool
-This application is a tool to generate the needed files
-to quickly create a golang application.`,
+		Long: `pb is a protocol buffers utility tool based on docker\n
+Images:
+colemanword/gcloud
+colemanword/protoc
+colemanword/tools
+colemanword/source
+colemanword/templates
+`,
 	}
 )
 
@@ -59,8 +64,6 @@ func init() {
 	}
 
 	{
-		viper.BindPFlags(rootCmd.Flags())
-		viper.BindPFlags(rootCmd.PersistentFlags())
 		viper.SetDefault("input", ".")
 		viper.SetDefault("output", ".")
 	}
@@ -68,5 +71,11 @@ func init() {
 	{
 		rootCmd.AddCommand(walk.RootCmd)
 		rootCmd.AddCommand(load.RootCmd)
+	}
+}
+
+func ifErrr (err error) {
+	if err != nil {
+		log.Fatal(err.Error())
 	}
 }

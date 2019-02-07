@@ -1,7 +1,7 @@
 package engine
 
 import (
-	"github.com/gofunct/pb/pkg/transport//api"
+	"github.com/gofunct/pb/pkg/transport/api"
 	"github.com/pkg/errors"
 	"github.com/soheilhy/cmux"
 	"google.golang.org/grpc/grpclog"
