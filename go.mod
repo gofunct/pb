@@ -1,25 +1,31 @@
 module github.com/gofunct/pb
 
 require (
-	github.com/fatih/color v1.7.0
-	github.com/google/wire v0.2.1
-	github.com/inconshreveable/mousetrap v1.0.0 // indirect
-	github.com/izumin5210/clig v0.2.0 // indirect
-	github.com/izumin5210/gex v0.4.4
-	github.com/izumin5210/grapi v0.3.2 // indirect
-	github.com/mattn/go-colorable v0.1.0
-	github.com/mattn/go-isatty v0.0.4 // indirect
+	github.com/go-kit/kit v0.8.0
+	github.com/gofunct/gofs v0.0.0-20190201225821-ff30dd2f57cc
+	github.com/gofunct/stencil v0.0.0-20190201044706-22be34c54e3d
+	github.com/google/go-cmp v0.2.0
+	github.com/grpc-ecosystem/go-grpc-middleware v1.0.0
+	github.com/grpc-ecosystem/grpc-gateway v1.7.0
+	github.com/hashicorp/go-getter v1.0.2
+	github.com/mgutz/str v1.2.0
 	github.com/pkg/errors v0.8.1
+	github.com/prometheus/common v0.2.0
+	github.com/shiyanhui/hero v0.0.1
+	github.com/sirupsen/logrus v1.3.0
+	github.com/soheilhy/cmux v0.1.4
 	github.com/spf13/afero v1.2.1
 	github.com/spf13/cobra v0.0.3
-	github.com/spf13/pflag v1.0.3 // indirect
+	github.com/spf13/pflag v1.0.3
+	github.com/spf13/viper v1.3.1
 	github.com/stretchr/testify v1.3.0
-	github.com/tcnksm/go-input v0.0.0-20180404061846-548a7d7a8ee8
 	go.pedge.io/pb v0.0.0-20171203174523-dbc791b8a69c
-	go.uber.org/atomic v1.3.2 // indirect
-	go.uber.org/multierr v1.1.0 // indirect
-	go.uber.org/zap v1.9.1
-	golang.org/x/crypto v0.0.0-20190131182504-b8fe1690c613 // indirect
-	golang.org/x/sys v0.0.0-20190204203706-41f3e6584952 // indirect
-	k8s.io/utils v0.0.0-20190204185745-a326ccf4f02b
+	golang.org/x/crypto v0.0.0-20190131182504-b8fe1690c613
+	golang.org/x/sync v0.0.0-20181221193216-37e7f081c4d4
+	google.golang.org/grpc v1.18.0
+	gopkg.in/cheggaaa/pb.v1 v1.0.27
+	k8s.io/api v0.0.0-20190206011303-7d75eb91fcfa
+	k8s.io/apimachinery v0.0.0-20190205091131-4b4ea28f2790
+	k8s.io/client-go v10.0.0+incompatible
+	sigs.k8s.io/structured-merge-diff v0.0.0-20190130003954-e5e029740eb8 // indirect
 )
