@@ -9,7 +9,6 @@ import (
 )
 
 type HandlerFunc func(grpcServer *grpc.Server, mux *runtime.ServeMux) http.HandlerFunc
-
 func NewHandlerFunc(grpcServer *grpc.Server, mux *runtime.ServeMux) HandlerFunc {
 	return func(grpcServer *grpc.Server, mux *runtime.ServeMux) http.HandlerFunc {
 		return grpcHandlerFunc(grpcServer , mux)
